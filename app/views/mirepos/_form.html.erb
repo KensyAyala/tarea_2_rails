@@ -1,0 +1,27 @@
+<%= form_with(model: mirepo, local: true) do |form| %>
+  <% if mirepo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mirepo.errors.count, "error") %> prohibited this mirepo from being saved:</h2>
+
+      <ul>
+      <% mirepo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user, id: :mirepo_user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :edad %>
+    <%= form.number_field :edad, id: :mirepo_edad %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

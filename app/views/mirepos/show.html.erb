@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mirepo.user %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @mirepo.edad %>
+</p>
+
+<%= link_to 'Edit', edit_mirepo_path(@mirepo) %> |
+<%= link_to 'Back', mirepos_path %>

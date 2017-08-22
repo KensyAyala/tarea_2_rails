@@ -1,0 +1,2 @@
+class Mirepo < ApplicationRecord
+end
